@@ -9,5 +9,4 @@ public class SpringBootJobRestApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootJobRestApiApplication.class, args);
 	}
-
 }

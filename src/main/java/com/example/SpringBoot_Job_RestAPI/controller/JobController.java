@@ -53,4 +53,15 @@ public class JobController {
         service.deleteJob(postId);
         return "JobPost Deleted !";
     }
+
+    @GetMapping("/otl_load")
+    public void otl_load(){
+        service.otl_onetimeload();
+    }
+
+    @GetMapping("/jobposts/keyword/{keyword}")
+    public List<JobPost> searchJob(@PathVariable String keyword){
+        List<JobPost> items = service.searchJobsByKeyword(keyword);
+        return items;
+    }
 }
