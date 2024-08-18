@@ -1,0 +1,24 @@
+version: 3.7;
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    networks:
+      - job-network
+
+#  db:
+#    image: postgres:latest
+#    environment:
+#      POSTGRES_USER: thor
+#      POSTGRES_PASSWORD: 123
+#      POSTGRES_DB: school
+#    ports:
+#      - "5432:5432"
+#    networks:
+#      -  job-network
+
+networks:
+  job-network:
+    driver: bridge
